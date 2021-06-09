@@ -1,1 +1,1 @@
-print("うんち！w")
+print("うんち！wwww")
