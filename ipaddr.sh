@@ -36,7 +36,7 @@ IP14=`ip_char_at 15`
 IP15=`ip_char_at 16`
 
 #Pythonで実行するよ
-python3 testoled.py ${IP1}${IP2}${IP3}${IP4}${IP5}${IP6}${IP7}${IP8}${IP9}${IP10}${IP11}${IP12}${IP13}${IP14}${IP15}
+python3 testoled.py ${IP}
 
 #いったんコメントアウトするか
 # sudo i2cset -y 1 $LCD 0 0x38 0x39 0x14 0x70 0x56 0x6c i
