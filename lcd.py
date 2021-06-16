@@ -19,7 +19,7 @@ print(wifi_ip)
 print(eth_ip)
 
 for tmp1 in range(len(wifi_ip)):
-wifi_ip_part = str(hex(ord(wifi_ip[tmp1])))
+    wifi_ip_part = str(hex(ord(wifi_ip[tmp1])))
 #print(myip_part)
 subprocess.run(['i2cset','-y','1','0x3c','0x40',wifi_ip_part])
 subprocess.run(['i2cset','-y','1','0x3c','0x40','0x20'])
@@ -27,7 +27,7 @@ subprocess.run(['i2cset','-y','1','0x3c','0x40','0x20'])
 subprocess.run(['i2cset','-y','1','0x3c','0x00','0xa0'])
 
 for tmp1 in range(len(eth_ip)):
-eth_ip_part = str(hex(ord(eth_ip[tmp1])))
+    eth_ip_part = str(hex(ord(eth_ip[tmp1])))
 #print(myip_part)
 subprocess.run(['i2cset','-y','1','0x3c','0x40',eth_ip_part])
 
