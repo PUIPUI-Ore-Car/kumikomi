@@ -13,8 +13,8 @@ subprocess.run(['i2cset','-y','1','0x3c','0x00','0xff'])
 subprocess.run(['i2cset','-y','1','0x3c','0x00','0x80'])
 
 ip = ipget.ipget()
-wifi_ip = ip.ipaddr(“wlan0”)
-eth_ip = ip.ipaddr(“eth0”)
+wifi_ip = ip.ipaddr("wlan0")
+eth_ip = ip.ipaddr("eth0")
 print(wifi_ip)
 print(eth_ip)
 
