@@ -15,8 +15,8 @@ image = Image.new("1", (oled.width, oled.height))
 draw = ImageDraw.Draw(image)
 
 
-font = ImageFont.truetype("../usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc", 13)
-font2 = ImageFont.truetype("../usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc", 10)
+font = ImageFont.truetype("..../usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc", 13)
+font2 = ImageFont.truetype("..../usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc", 10)
 
 # Draw the text
 draw.text((0, 0), "うんち！w", font=font, fill=255)
