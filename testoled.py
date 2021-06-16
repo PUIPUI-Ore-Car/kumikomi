@@ -19,7 +19,7 @@ font = ImageFont.truetype("/usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.
 font2 = ImageFont.truetype("/usr/share/fonts/opentype/noto/NotoSansCJK-DemiLight.ttc", 10)
 
 # Draw the text
-draw.text((0, 0), "こんにちは、世界！", font=font, fill=255)
+draw.text((0, 0), "うんち！w", font=font, fill=255)
 draw.text((0, 17), "This is OLED test.", font=font2, fill=255)
 
 # Display image
