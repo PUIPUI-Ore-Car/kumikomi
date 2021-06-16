@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep 3.0
+sleep 5.0
 
 LCD=0x3c
 NETWORK=wlan0
