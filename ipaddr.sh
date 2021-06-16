@@ -35,8 +35,12 @@ IP13=`ip_char_at 14`
 IP14=`ip_char_at 15`
 IP15=`ip_char_at 16`
 
-sudo i2cset -y 1 $LCD 0 0x38 0x39 0x14 0x70 0x56 0x6c i
-sudo i2cset -y 1 $LCD 0 0x38 0x0d 0x01 i
-sudo i2cset -y 1 $LCD 0x40 $IP1 $IP2 $IP3 $IP4 $IP5 $IP6 $IP7 $IP8 i
-sudo i2cset -y 1 $LCD 0x00 0xc0 i
-sudo i2cset -y 1 $LCD 0x40 $IP9 $IP10 $IP11 $IP12 $IP13 $IP14 $IP15 i
+#Pythonで実行するよ
+python3 testoled.py ${IP1}${IP2}${IP3}${IP4}${IP5}${IP6}${IP7}${IP8}${IP9}${IP10}${IP11}${IP12}${IP13}${IP14}${IP15}
+
+#いったんコメントアウトするか
+# sudo i2cset -y 1 $LCD 0 0x38 0x39 0x14 0x70 0x56 0x6c i
+# sudo i2cset -y 1 $LCD 0 0x38 0x0d 0x01 i
+# sudo i2cset -y 1 $LCD 0x40 $IP1 $IP2 $IP3 $IP4 $IP5 $IP6 $IP7 $IP8 i
+# sudo i2cset -y 1 $LCD 0x00 0xc0 i
+# sudo i2cset -y 1 $LCD 0x40 $IP9 $IP10 $IP11 $IP12 $IP13 $IP14 $IP15 i
