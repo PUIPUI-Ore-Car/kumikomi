@@ -16,7 +16,7 @@ image = Image.new("1", (oled.width, oled.height))
 draw = ImageDraw.Draw(image)
 
 
-font = ImageFont.truetype("/home/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", 13)
+font = ImageFont.truetype("/home/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", 12)
 font2 = ImageFont.truetype("/home/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", 10)
 
 # Draw the text
