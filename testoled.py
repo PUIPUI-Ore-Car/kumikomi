@@ -20,8 +20,8 @@ font = ImageFont.truetype("/home/usr/share/fonts/opentype/noto/NotoSansCJK-Regul
 font2 = ImageFont.truetype("/home/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc", 10)
 
 # Draw the text
-draw.text((0, 0), "イエ～イ 見てるぅ～？", font=font, fill=255)
-draw.text((0, 17), "IP："+ip[1], font=font2, fill=255)
+draw.text((0, 0), "イエ～イ 見てるぅ～？", font=font2, fill=255)
+draw.text((0, 17), "IP："+ip[1], font=font, fill=255)
 
 # Display image
 oled.image(image)
