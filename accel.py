@@ -77,7 +77,7 @@ while 1:
     
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
-    if spx_fl > 0.001  :
+    if spx_fl > 0 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
