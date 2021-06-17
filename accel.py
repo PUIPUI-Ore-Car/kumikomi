@@ -74,7 +74,7 @@ while 1:
     #クソ雑に速度を求めていくよ
     acc_fl = float(ay)
     spx_fl = acc_fl * 0.1
-    sspx += spx_fl
+    
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
     if spx_fl > 0.001  :
@@ -82,5 +82,5 @@ while 1:
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
 
-    print ('{0:4.3f}' .format(sspx))
+    print ('{0:4.3f}' .format(spx_fl))
     # print ('{0:4.3f}\t{0:4.3f}\t{0:4.3f}' .format(ax, ay, az))
