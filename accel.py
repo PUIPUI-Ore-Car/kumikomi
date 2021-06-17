@@ -54,7 +54,7 @@ def getAccel():
 
 # ax, ay, az = getAccel()
 while 1:
-    sleep(0.3)
+    sleep(0.1)
 
     ax, ay, az = getAccel()
 
