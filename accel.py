@@ -72,12 +72,12 @@ while 1:
     az= getAccel("z")
     
     #クソ雑に速度を求めていくよ
-    acc_fl = float(az)
+    acc_fl = float(ay)
     spx_fl = acc_fl * 0.01
     sspx += spx_fl
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
-    if sspx > 1 or sspx < -1 :
+    if spx_fl > 0.001  :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
