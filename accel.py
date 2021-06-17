@@ -18,9 +18,9 @@ ACCEL_ZOUT = 0x3f
 # ACCEL_ZOUT = 0x47
 
 TEMP_OUT = 0x41
-# GYRO_XOUT = 0x43
-# GYRO_YOUT = 0x45
-# GYRO_ZOUT = 0x47
+GYRO_XOUT = 0x43
+GYRO_YOUT = 0x45
+GYRO_ZOUT = 0x47
 
 PWR_MGMT_1 = 0x6b
 PWR_MGMT_2 = 0x6c
@@ -68,7 +68,7 @@ while 1:
     ay= getAccel("y")
     az= getAccel("z")
 
-    if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
+    if ax > 1.0 or ax < -1.0 or ay > 1.0 or ay < -1.0 or az > 1.0 or az < -1.0 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
