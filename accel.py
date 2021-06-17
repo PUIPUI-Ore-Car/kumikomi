@@ -3,7 +3,8 @@
 import smbus
 import math
 from time import sleep
-from playsound import playsound
+# from playsound import playsound
+import subprocess
 
 DEV_ADDR = 0x68
 
@@ -59,6 +60,7 @@ while 1:
 
     if ax > 10 or ax < -1 :
         print ('音が出たよ！')
-        playsound("pui.mp3", False)
+        # playsound("pui.mp3")
+        subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
 
     print ('{0:4.3f}' .format(ax))
