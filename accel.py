@@ -10,12 +10,15 @@ DEV_ADDR = 0x68
 
 # ACCEL_XOUT = 0x3b
 ACCEL_XOUT = 0x43
-ACCEL_YOUT = 0x3d
-ACCEL_ZOUT = 0x3f
+# ACCEL_YOUT = 0x3d
+ACCEL_YOUT = 0x45
+# ACCEL_ZOUT = 0x3f
+ACCEL_ZOUT = 0x47
+
 TEMP_OUT = 0x41
 # GYRO_XOUT = 0x43
-GYRO_YOUT = 0x45
-GYRO_ZOUT = 0x47
+# GYRO_YOUT = 0x45
+# GYRO_ZOUT = 0x47
 
 PWR_MGMT_1 = 0x6b
 PWR_MGMT_2 = 0x6c
@@ -46,22 +49,26 @@ def getGyro():
     return [x, y, z]
 
 
-def getAccel():
-    x = read_word_sensor(ACCEL_XOUT)/ 16384.0
-    y= read_word_sensor(ACCEL_YOUT)/ 16384.0
-    z= read_word_sensor(ACCEL_ZOUT)/ 16384.0
-    return [x, y, z]
+def getAccel(selector):
+    if(selector == "x"):
+        return read_word_sensor(ACCEL_XOUT)/ 16384.0
+    elif(selector == "y"):
+        return read_word_sensor(ACCEL_YOUT)/ 16384.0
+    elif(selector == "z"):
+        return read_word_sensor(ACCEL_ZOUT)/ 16384.0
 
 
 # ax, ay, az = getAccel()
 while 1:
     sleep(0.1)
 
-    ax, ay, az = getAccel()
+    ax= getAccel("x")
+    ay= getAccel("y")
+    az= getAccel("z")
 
-    if ax > 1 or ax < -1 :
+    if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
 
-    print ('{0:4.3f}' .format(ax))
+    print ('{0:4.3f}\t{0:4.3f}\t{0:4.3f}' .format(ax, ay, az))
