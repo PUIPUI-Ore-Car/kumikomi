@@ -26,6 +26,8 @@ ip= ipget.ipget()
 oled.fill(0)
 oled.show()
 
+print(ip.ipaddr("wlan0"))
+
 # Create blank image for drawing.
 flg = True
 while(True):
