@@ -58,7 +58,7 @@ while 1:
     # prevAy = ay
     # prevAz = az
     ax, ay, az = getAccel()
-    print(type(ax))
+    print((ax > 20.0))
 
     if ax > 20.0 or ax < -20.0 or ay > 20.0 or ay < -20.0 or az > 20.0 or az < -20.0 :
         print ('音が出たよ！')
