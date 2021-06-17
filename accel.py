@@ -59,7 +59,7 @@ while 1:
 
     ax, ay, az = getAccel()
 
-    if ax > 10 or ax < -1 :
+    if ax > 1 or ax < -1 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
