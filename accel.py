@@ -61,14 +61,23 @@ def getAccel(selector):
 
 
 # ax, ay, az = getAccel()
+
+sspx=0
+
 while 1:
     sleep(0.1)
 
     ax= getAccel("x")
     ay= getAccel("y")
     az= getAccel("z")
+    
+    #クソ雑に速度を求めていくよ
+    acc_fl = float(ax)
+    spx_fl = acc_fl * 0.05
+    sspx += spx_fl
 
-    if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
+    #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
+    if sspx > 1 or sspx < -1 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
