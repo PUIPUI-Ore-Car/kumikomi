@@ -26,7 +26,7 @@ oled.show()
 
 # Create blank image for drawing.
 flg = True
-while(Ture):
+while(True):
     image = Image.new("1", (oled.width, oled.height))
     draw = ImageDraw.Draw(image)
 
