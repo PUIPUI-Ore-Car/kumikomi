@@ -59,7 +59,7 @@ while 1:
     # prevAz = az
     ax, ay, az = getAccel()
 
-    if ax > 20 || ax < -20 || ay > 20 || ay < -20 || az > 20 || az < -20 :
+    if ax > 20 or ax < -20 or ay > 20 or ay < -20 or az > 20 or az < -20 :
         print ('音が出たよ！')
         playsound("./audio/pui.mp3")
 
