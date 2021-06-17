@@ -8,12 +8,14 @@ import subprocess
 
 DEV_ADDR = 0x68
 
-# ACCEL_XOUT = 0x3b
-ACCEL_XOUT = 0x43
-# ACCEL_YOUT = 0x3d
-ACCEL_YOUT = 0x45
-# ACCEL_ZOUT = 0x3f
-ACCEL_ZOUT = 0x47
+ACCEL_XOUT = 0x3b
+ACCEL_YOUT = 0x3d
+ACCEL_ZOUT = 0x3f
+
+#おそらくこちらが本来のAccel
+# ACCEL_XOUT = 0x43
+# ACCEL_YOUT = 0x45
+# ACCEL_ZOUT = 0x47
 
 TEMP_OUT = 0x41
 # GYRO_XOUT = 0x43
