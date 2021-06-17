@@ -46,7 +46,7 @@ while(True):
         draw.text((0, 0), "SSID: "+get_ssid(), font=font2, fill=255)
         flg = True
 
-    draw.text((0, 17), "IP："+ip.ipaddr("wlan0"), font=font, fill=255)
+    draw.text((0, 17), "IP:"+ip.ipaddr("wlan0"), font=font, fill=255)
 
     # Display image
     oled.image(image)
