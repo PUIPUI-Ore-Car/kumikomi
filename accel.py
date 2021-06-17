@@ -51,14 +51,17 @@ def getAccel():
     return [x, y, z]
 
 
-ax, ay, az = getAccel()
+# ax, ay, az = getAccel()
 while 1:
     sleep(0.3)
-    tmpAx = ax
-    tmpAy = ay
-    tmpAz = az
+    # prevAx = ax
+    # prevAy = ay
+    # prevAz = az
     ax, ay, az = getAccel()
 
-    # if()
+    if ax > 20 || ax < -20 || ay > 20 || ay < -20 || az > 20 || az < -20 :
+        print ('音が出たよ！')
+        playsound("./audio/pui.mp3")
+
     gx, gy, gz = getGyro()
     print ('{0:4.3f},   {0:4.3f},    {0:4.3f},     {0:4.3f},      {0:4.3f},      {0:4.3f},' .format(gx, gy, gz, ax, ay, az))
