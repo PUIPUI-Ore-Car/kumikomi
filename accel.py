@@ -3,7 +3,7 @@
 import smbus
 import math
 from time import sleep
-import time
+from playsound import playsound
 
 DEV_ADDR = 0x68
 
@@ -51,7 +51,14 @@ def getAccel():
     return [x, y, z]
 
 
+ax, ay, az = getAccel()
 while 1:
+    sleep(0.3)
+    tmpAx = ax
+    tmpAy = ay
+    tmpAz = az
     ax, ay, az = getAccel()
+
+    # if()
     gx, gy, gz = getGyro()
     print ('{0:4.3f},   {0:4.3f},    {0:4.3f},     {0:4.3f},      {0:4.3f},      {0:4.3f},' .format(gx, gy, gz, ax, ay, az))
