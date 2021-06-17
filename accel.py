@@ -72,7 +72,7 @@ while 1:
     az= getAccel("z")
     
     #クソ雑に速度を求めていくよ
-    acc_fl = float(ax)
+    acc_fl = float(az)
     spx_fl = acc_fl * 0.01
     sspx += spx_fl
 
