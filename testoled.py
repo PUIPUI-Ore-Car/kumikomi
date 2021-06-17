@@ -37,8 +37,10 @@ while(True):
     # Draw the text
     if(flg):
         draw.text((0, 0), "イエ～イ 見てるぅ～？", font=font2, fill=255)
+        flg = False
     else:
         draw.text((0, 0), "SSID: "+get_ssid(), font=font2, fill=255)
+        flg = True
 
     draw.text((0, 17), "IP："+ip[1], font=font, fill=255)
 
