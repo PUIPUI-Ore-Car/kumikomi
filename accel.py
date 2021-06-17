@@ -57,7 +57,7 @@ while 1:
 
     ax, ay, az = getAccel()
 
-    if (ax * 10) > 5 or (ax * 10) < -5 :
+    if ax > 10 or ax < -1 :
         print ('音が出たよ！')
         playsound("./audio/pui.mp3")
 
