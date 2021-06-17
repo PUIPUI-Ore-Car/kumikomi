@@ -73,7 +73,7 @@ while 1:
     
     #クソ雑に速度を求めていくよ
     acc_fl = float(ax)
-    spx_fl = acc_fl * 0.05
+    spx_fl = acc_fl * 0.01
     sspx += spx_fl
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
