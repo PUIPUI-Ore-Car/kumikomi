@@ -82,4 +82,5 @@ while 1:
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
 
-    print ('{0:4.3f}\t{0:4.3f}\t{0:4.3f}' .format(ax, ay, az))
+    print ('{0:4.3f}' .format(sspx))
+    # print ('{0:4.3f}\t{0:4.3f}\t{0:4.3f}' .format(ax, ay, az))
