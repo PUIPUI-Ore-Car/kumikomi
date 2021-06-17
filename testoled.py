@@ -5,6 +5,7 @@ import sys
 
 import subprocess
 import time
+import ipget
 
 # WiFiのSSIDを取得
 def get_ssid():
@@ -18,7 +19,8 @@ def get_ssid():
 
 i2c = board.I2C()
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, addr=0x3c)
-ip= sys.argv 
+# ip= sys.argv 
+ip= ipget.ipget()
 
 # Clear display.
 oled.fill(0)
@@ -42,7 +44,7 @@ while(True):
         draw.text((0, 0), "SSID: "+get_ssid(), font=font2, fill=255)
         flg = True
 
-    draw.text((0, 17), "IP："+ip[1], font=font, fill=255)
+    draw.text((0, 17), "IP："+ip.ipaddr("wlan0"), font=font, fill=255)
 
     # Display image
     oled.image(image)
