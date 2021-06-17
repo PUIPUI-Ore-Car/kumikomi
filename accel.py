@@ -62,8 +62,6 @@ def getAccel(selector):
 
 # ax, ay, az = getAccel()
 
-sspx=0
-
 while 1:
     sleep(0.1)
 
@@ -71,9 +69,8 @@ while 1:
     ay= getAccel("y")
     az= getAccel("z")
     
-    #クソ雑に速度を求めていくよ
-    acc_fl = float(ay)
-    spx_fl = acc_fl * 0.1
+    #クソ雑に速度を求めていくよ(センサーの向きの都合上正面がayになった)
+    spx_fl = ay * 0.1  #瞬間の速度を求めています（静止時は-0.001）
     
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
