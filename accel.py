@@ -54,15 +54,11 @@ def getAccel():
 # ax, ay, az = getAccel()
 while 1:
     sleep(0.3)
-    # prevAx = ax
-    # prevAy = ay
-    # prevAz = az
-    ax, ay, az = getAccel()
-    # print(ax)
 
-    # if ax > 20.0 or ax < -20.0 or ay > 20.0 or ay < -20.0 or az > 20.0 or az < -20.0 :
-    if ax > 20.0 or ax < -20.0 :
+    ax, ay, az = getAccel()
+
+    if (ax * 10) > 5 or (ax * 10) < -5 :
         print ('音が出たよ！')
         playsound("./audio/pui.mp3")
 
-    print ('{0:4.3f},   {0:4.3f},    {0:4.3f}' .format(ax, ay, az))
+    print ('{0:4.3f}' .format(ax))
