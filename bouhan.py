@@ -37,7 +37,7 @@ def sensor_detected(channel):
     # cmd = "python bouhan-buzzer.py beep1"
     # subprocess.call(cmd, shell=True)
 
-    # print('監視を再開します')
+    print('監視を再開します')
     time.sleep(0.1)
 
 
