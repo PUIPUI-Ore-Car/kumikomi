@@ -21,7 +21,7 @@ def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
     while(True):
         # TRIGピンを0.3[s]だけLOW
         GPIO.output(TRIG_PIN, GPIO.LOW)
-        time.sleep(0.3)
+        time.sleep(0.1)
         # TRIGピンを0.00001[s]だけ出力(超音波発射)        
         GPIO.output(TRIG_PIN, True)
         time.sleep(0.00001)
@@ -30,7 +30,10 @@ def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
         t = pulseIn(ECHO_PIN)
         # 距離[cm] = 音速[cm/s] * 時間[s]/2
         distance = v * t/2
-        print(distance, "cm")
+        if(distance < 20):
+            print("なでられたよ")
+        else:
+            print(distance, "cm")
     # ピン設定解除
     GPIO.cleanup()
 
