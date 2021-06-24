@@ -20,24 +20,24 @@ if not os.path.isdir(SAVEDIR):
 def sensor_detected(channel):
     print('*** ALERT *** 侵入異常発生')
 
-    # 撮影（raspistillコマンドの外部呼び出し）
-    now = datetime.datetime.now()
-    filename = os.path.join(SAVEDIR, 'Image_' + now.strftime('%Y%m%d_%H%M%S') + '.jpg')
-    cmd = 'raspistill -o ' + filename + ' -t 2000 -w 1024 -h 768'
-    subprocess.call(cmd, shell=True)
+    # # 撮影（raspistillコマンドの外部呼び出し）
+    # now = datetime.datetime.now()
+    # filename = os.path.join(SAVEDIR, 'Image_' + now.strftime('%Y%m%d_%H%M%S') + '.jpg')
+    # cmd = 'raspistill -o ' + filename + ' -t 2000 -w 1024 -h 768'
+    # subprocess.call(cmd, shell=True)
 
-    print('画像を保存しました - Filename: ' + filename)
+    # print('画像を保存しました - Filename: ' + filename)
 
-    # 警報音を鳴動（python buzzerコマンドの外部呼び出し）
-    cmd = "python bouhan-buzzer.py alert &"
-    subprocess.call(cmd, shell=True)
+    # # 警報音を鳴動（python buzzerコマンドの外部呼び出し）
+    # cmd = "python bouhan-buzzer.py alert &"
+    # subprocess.call(cmd, shell=True)
 
-    # 警報発生後10秒間の待機
-    time.sleep(10)
-    cmd = "python bouhan-buzzer.py beep1"
-    subprocess.call(cmd, shell=True)
+    # # 警報発生後10秒間の待機
+    # time.sleep(10)
+    # cmd = "python bouhan-buzzer.py beep1"
+    # subprocess.call(cmd, shell=True)
 
-    print('監視を再開します')
+    # print('監視を再開します')
     time.sleep(1)
 
 
