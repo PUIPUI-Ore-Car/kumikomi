@@ -38,7 +38,7 @@ def sensor_detected(channel):
     # subprocess.call(cmd, shell=True)
 
     # print('監視を再開します')
-    time.sleep(1)
+    time.sleep(0.1)
 
 
 ## イベントの定義
@@ -48,7 +48,7 @@ GPIO.add_event_detect(PORT, GPIO.RISING, callback=sensor_detected, bouncetime=20
 try:
     print('監視をスタートします (CTRL+Cで終了)')
     while True:  # 永遠にループ
-        time.sleep(1)
+        time.sleep(0.1)
 except KeyboardInterrupt:  # CTRL+Cを押した場合
     print('')
     print('正常終了')
