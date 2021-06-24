@@ -18,6 +18,8 @@ def pulseIn(PIN, start=1, end=0):
 
 # 距離計測
 def calc_distance(TRIG_PIN, ECHO_PIN, v=34000): 
+    # 連続したかを確認するflg
+    flg = False
     while(True):
         # TRIGピンを0.3[s]だけLOW
         GPIO.output(TRIG_PIN, GPIO.LOW)
@@ -31,8 +33,11 @@ def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
         # 距離[cm] = 音速[cm/s] * 時間[s]/2
         distance = v * t/2
         if(distance < 20):
-            print("なでられたよ")
+            if(!flg):
+                print("なでられたよ")
+                flg = True
         else:
+            flg = False
             print(distance, "cm")
     # ピン設定解除
     GPIO.cleanup()
