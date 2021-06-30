@@ -1,5 +1,7 @@
+const { response } = require('express');
 var express = require('express');
 var router = express.Router();
+const request = require('request')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -21,6 +23,23 @@ router.post('/', (req, res, next) => {
   if(puiCount === countLimit){
     // APIに送信
     console.log("送信")
+
+    // リクエストを送信時のオプション
+    const reqOpt = {
+      method: 'POST',
+      json: 'true',
+      url: 'https://example.com',
+      body: JSON.stringify({data: 'value'}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+
+    // リクエスト送信
+    request(reqOpt, (error, response) => {
+      console.log('送信したよ')
+      console.log(error, response.body)
+    })
     puiCount = 0
   }
 
