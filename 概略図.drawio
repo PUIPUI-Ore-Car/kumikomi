@@ -106,9 +106,6 @@
                 <mxCell id="29" value="- IPアドレス&#10;- SSID&#10;- 温湿度情報&#10;- PUI数&#10;- 送信時刻" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#080808;" parent="1" vertex="1">
                     <mxGeometry x="720" y="417.5" width="140" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://1.bp.blogspot.com/-qJOC3lNBx-o/X9GYKL3X61I/AAAAAAABctw/gcQUKI_5cIoM1HEm794M2SxTP31HAcTPgCNcBGAsYHQ/s400/idol_koisuru_boy_man.png;strokeColor=#303030;" parent="1" vertex="1">
-                    <mxGeometry x="16.15" y="162.5" width="153.85" height="170" as="geometry"/>
-                </mxCell>
                 <mxCell id="39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#303030;" parent="1" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
