@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="tnHq8Ioqzv3WrPiGQhEZ" name="ページ1">
-        <mxGraphModel dx="1374" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="1118" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -69,16 +69,16 @@
                 <mxCell id="15" value="USBフラッシュメモリ" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#303030;" vertex="1" parent="1">
                     <mxGeometry x="440" y="570" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="対象物との距離データ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="20" value="対象物との距離データ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="100" y="650" width="130" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="加速度データ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="21" value="加速度データ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="160" y="545" width="110" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="ファイルデータ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="22" value="ファイルデータ" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="390" y="640" width="90" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="接続中のSSID, IPアドレス" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="23" value="接続中のSSID, IPアドレス" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="414" y="545" width="150" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.027;entryY=0.465;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#303030;" edge="1" parent="1" target="30">
@@ -86,10 +86,10 @@
                         <mxPoint x="520" y="310" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="27" value="&lt;span style=&quot;font-weight: normal&quot;&gt;データアップロード(無線通信)&lt;/span&gt;" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="27" value="&lt;span style=&quot;font-weight: normal&quot;&gt;データアップロード(無線通信)&lt;/span&gt;" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="610" y="540" width="170" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="- IPアドレス&#10;- SSID&#10;- 温湿度情報&#10;- PUI数&#10;- 送信時刻" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="29" value="- IPアドレス&#10;- SSID&#10;- 温湿度情報&#10;- PUI数&#10;- 送信時刻" style="text;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="610" y="560" width="140" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://1.bp.blogspot.com/-qJOC3lNBx-o/X9GYKL3X61I/AAAAAAABctw/gcQUKI_5cIoM1HEm794M2SxTP31HAcTPgCNcBGAsYHQ/s400/idol_koisuru_boy_man.png;strokeColor=#303030;" vertex="1" parent="1">
@@ -102,7 +102,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="32" value="ユーザー" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="32" value="ユーザー" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="36.919999999999995" y="400" width="63.08" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#303030;" edge="1" parent="1" source="34" target="2">
@@ -113,16 +113,16 @@
                 <mxCell id="34" value="温湿度センサー" style="rounded=1;whiteSpace=wrap;html=1;align=center;strokeColor=#303030;" vertex="1" parent="1">
                     <mxGeometry x="275" y="410" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="温湿度情報" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="36" value="温湿度情報" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="340" y="470" width="70" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="Webページ経由で情報を閲覧&lt;br&gt;- ラズパイのIPアドレス&lt;br&gt;- SSID&lt;br&gt;- 温湿度情報&lt;br&gt;- PUI数(オドメーター)&lt;br&gt;- 送信時刻(最終更新日時)" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="37" value="Webページ経由で情報を閲覧&lt;br&gt;- ラズパイのIPアドレス&lt;br&gt;- SSID&lt;br&gt;- 温湿度情報&lt;br&gt;- PUI数(オドメーター)&lt;br&gt;- 送信時刻(最終更新日時)" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="241" y="210" width="190" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="38" value="サーバー" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;strokeColor=#303030;" vertex="1" parent="1">
                     <mxGeometry x="500" y="200" width="300" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="ファイルアップロード" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="40" value="ファイルアップロード" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="100" y="690" width="130" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#303030;" edge="1" parent="1">
@@ -134,7 +134,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="42" value="ラジコン操作" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=#303030;fontColor=#080808;" vertex="1" parent="1">
+                <mxCell id="42" value="ラジコン操作" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" vertex="1" parent="1">
                     <mxGeometry x="80" y="760" width="130" height="20" as="geometry"/>
                 </mxCell>
             </root>
