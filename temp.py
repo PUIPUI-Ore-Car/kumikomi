@@ -1,21 +1,53 @@
 import RPi.GPIO as GPIO
-import dht11       # ・・・ ①
+import dht11
 import time
 import datetime
 
+import json
+import requests
+
+def postJson(temp, humidity):
+	# 温湿度を送信する
+	url = "http://localhost:3000/temperature"
+
+	# jsonのデータ
+	jsonData = {
+		"temperature": temp,
+		"humidity": humidity
+	}
+
+	# POST送信
+	response = requests.post(
+		url,
+		data = json.dumps(jsonData)
+	)
+
+	return response.json()
+
+
+
 # initialize GPIO
-GPIO.setwarnings(False)       # ・・・ ②
+GPIO.setwarnings(True)
 GPIO.setmode(GPIO.BCM)
-GPIO.cleanup()
 
 # read data using pin 14
-instance = dht11.DHT11(pin=14)      # ・・・ ③
+instance = dht11.DHT11(pin=18)
 
-while True:
-    result = instance.read()    # ・・・ ④
-    if result.is_valid():    # ・・・ ⑤
-        print("Last valid input: " + str(datetime.datetime.now()))
-        print("Temperature: %d C" % result.temperature)    # ・・・ ⑥
-        print("Humidity: %d %%" % result.humidity) 
+try:
+	while True:
+		result = instance.read()
+		if result.is_valid():
+			temp = result.temperature
+			humidity = result.humidity
+			postJson(temp, humidity)
 
-    time.sleep(1)    # ・・・ ⑦
+			print("Last valid input: " + str(datetime.datetime.now()))
+
+			print("Temperature: %-3.1f C" % result.temperature)
+			print("Humidity: %-3.1f %%" % result.humidity)
+
+		time.sleep(6)
+
+except KeyboardInterrupt:
+    print("Cleanup")
+    GPIO.cleanup()
