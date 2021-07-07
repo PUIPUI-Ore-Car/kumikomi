@@ -39,7 +39,7 @@ try:
 		if result.is_valid():
 			temp = result.temperature
 			humidity = result.humidity
-			postJson(temp, humidity)
+			retVal = postJson(temp, humidity)
 
 			print("Last valid input: " + str(datetime.datetime.now()))
 
