@@ -4,7 +4,7 @@ const request = require('request')
 const helpers = require('../helpers/helpers')
 
 // 送信先URL
-const sendURL = 'https://example.com'
+const sendURL = 'http://140.227.239.47/'
 
 // 温湿度
 let temperature = 25
