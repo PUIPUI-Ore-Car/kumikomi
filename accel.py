@@ -71,12 +71,12 @@ def postJson ():
     }
 
     # POST送信
-    response = requests.post(
-        url,
-        data = json.dumps(jsonData)
-    )
+	response = requests.post(
+		url,
+		json=jsonData
+	)
 
-    return response.json()
+	return json.loads(response.text)
 
 # ax, ay, az = getAccel()
 
