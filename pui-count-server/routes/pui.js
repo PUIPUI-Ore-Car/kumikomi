@@ -52,6 +52,7 @@ router.post('/temperature', (req, res, next) => {
   sendJson.humidity = humidity
 
   console.log(reqCount)
+  console.log(body)
 
   if(reqCount === reqCountLimit){
     // APIに送信
