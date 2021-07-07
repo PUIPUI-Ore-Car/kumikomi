@@ -6,6 +6,9 @@ from time import sleep
 # from playsound import playsound
 import subprocess
 
+import requests
+import json
+
 DEV_ADDR = 0x68
 
 # ACCEL_XOUT = 0x3b
@@ -59,6 +62,21 @@ def getAccel(selector):
     elif(selector == "z"):
         return read_word_sensor(ACCEL_ZOUT)/ 16384.0
 
+def postJson ():
+    url = "http://localhost:3000/"
+
+    # jsonのデータ
+    jsonData = {
+        "pui": "pui"
+    }
+
+    # POST送信
+    response = requests.post(
+        url,
+        data = json.dumps(jsonData)
+    )
+
+    return response.json()
 
 # ax, ay, az = getAccel()
 
@@ -78,6 +96,7 @@ while 1:
         print ('音が出たよ！')
         # playsound("pui.mp3")
         subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
+        postJson()
 
     print ('{0:4.3f}' .format(spx_fl))
     # print ('{0:4.3f}\t{0:4.3f}\t{0:4.3f}' .format(ax, ay, az))
