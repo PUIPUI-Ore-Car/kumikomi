@@ -71,12 +71,12 @@ def postJson ():
     }
 
     # POST送信
-	response = requests.post(
+    response = requests.post(
 		url,
 		json=jsonData
 	)
 
-	return json.loads(response.text)
+    return json.loads(response.text)
 
 # ax, ay, az = getAccel()
 
@@ -86,10 +86,10 @@ while 1:
     ax= getAccel("x")
     ay= getAccel("y")
     az= getAccel("z")
-    
+
     #クソ雑に速度を求めていくよ(センサーの向きの都合上正面がayになった)
     spx_fl = ay * 0.1  #瞬間の速度を求めています（静止時は-0.001）
-    
+
 
     #if ax > 0.5 or ax < -0.5 or ay > 0.5 or ay < -0.5 or az > 0.5 or az < -0.5 :
     if spx_fl > 0 :
