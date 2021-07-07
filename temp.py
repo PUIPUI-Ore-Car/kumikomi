@@ -19,7 +19,7 @@ def postJson(temp, humidity):
 	# POST送信
 	response = requests.post(
 		url,
-		data = json.dumps(jsonData)
+		json = json.dumps(jsonData)
 	)
 
 	return response.json()
