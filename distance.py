@@ -3,6 +3,27 @@
 import RPi.GPIO as GPIO
 import time
 
+import requests
+import json
+
+# JSONで送る
+def postJson ():
+    url = "http://localhost:3000/"
+
+    # jsonのデータ
+    jsonData = {
+        "pui": "pui"
+    }
+
+    # POST送信
+    response = requests.post(
+        url,
+        json=jsonData
+    )
+
+    return json.loads(response.text)
+
+
 # HIGH or LOWの時計測
 def pulseIn(PIN, start=1, end=0):
     if start==0: end = 1
@@ -11,20 +32,20 @@ def pulseIn(PIN, start=1, end=0):
     # ECHO_PINがHIGHである時間を計測
     while GPIO.input(PIN) == end:
         t_start = time.time()
-        
+
     while GPIO.input(PIN) == start:
         t_end = time.time()
     return t_end - t_start
 
 # 距離計測
-def calc_distance(TRIG_PIN, ECHO_PIN, v=34000): 
+def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
     # 連続したかを確認するflg
     flg = False
     while(True):
         # TRIGピンを0.3[s]だけLOW
         GPIO.output(TRIG_PIN, GPIO.LOW)
         time.sleep(0.1)
-        # TRIGピンを0.00001[s]だけ出力(超音波発射)        
+        # TRIGピンを0.00001[s]だけ出力(超音波発射)
         GPIO.output(TRIG_PIN, True)
         time.sleep(0.00001)
         GPIO.output(TRIG_PIN, False)
@@ -42,8 +63,7 @@ def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
     # ピン設定解除
     GPIO.cleanup()
 
-    
-# TRIGとECHOのGPIO番号   
+# TRIGとECHOのGPIO番号
 TRIG_PIN = 14
 ECHO_PIN = 15
 # ピン番号をGPIOで指定
