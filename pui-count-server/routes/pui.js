@@ -2,10 +2,12 @@ var express = require('express');
 var router = express.Router();
 const request = require('request')
 const helpers = require('../helpers/helpers')
+const childProcess = require('child_process');
+const { json } = require('express');
 
 // 送信先URL
-// const sendURL = 'http://140.227.239.47/'
-const sendURL = 'http://localhost/'
+const sendURL = 'http://140.227.239.47/'
+// const sendURL = 'http://localhost/'
 
 // 温湿度
 let temperature = 25
@@ -60,42 +62,22 @@ router.post('/temperature', (req, res, next) => {
     console.log("送信")
 
     // 送信するJSON(PUI数, 温度, 湿度, IPアドレス, SSID, 現在時刻)
-    // sendJson = {
-    //   puiCount: puiCount,
-    //   temperature: temperature,
-    //   humidity: humidity,
-    //   ipAddr: helpers.getIPaddr(),
-    //   ssid: helpers.getSSID(),
-    //   time: helpers.getTime()
-    // }
     sendJson = {
       puiCount: puiCount,
       temperature: temperature,
       humidity: humidity,
       ipAddr: helpers.getIPaddr(),
-      ssid: "debug-now",
+      ssid: helpers.getSSID(),
       time: helpers.getTime()
     }
 
     console.log(sendJson)
 
-    // リクエストを送信時のオプション
-    const reqOpt = {
-      method: 'POST',
-      json: 'true',
-      url: sendURL,
-      body: JSON.stringify(sendJson),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
+    // curl送信するコマンド
+    const command = 'curl -X POST -H "Content-Type: application/json" -d \'' + JSON.stringify(sendJson) + '\' ' + sendURL
 
-    // リクエスト送信
-    request(reqOpt, (error, response) => {
-      console.log(reqOpt);
-      console.log(response.body)
-      console.log('送信したよ')
-    })
+    // コマンド実行
+    childProcess.execSync(command)
 
     // リセット処理
     puiCount = 0
