@@ -4,7 +4,8 @@ const request = require('request')
 const helpers = require('../helpers/helpers')
 
 // 送信先URL
-const sendURL = 'http://140.227.239.47/'
+// const sendURL = 'http://140.227.239.47/'
+const sendURL = 'http://localhost/'
 
 // 温湿度
 let temperature = 25
@@ -59,12 +60,20 @@ router.post('/temperature', (req, res, next) => {
     console.log("送信")
 
     // 送信するJSON(PUI数, 温度, 湿度, IPアドレス, SSID, 現在時刻)
+    // sendJson = {
+    //   puiCount: puiCount,
+    //   temperature: temperature,
+    //   humidity: humidity,
+    //   ipAddr: helpers.getIPaddr(),
+    //   ssid: helpers.getSSID(),
+    //   time: helpers.getTime()
+    // }
     sendJson = {
       puiCount: puiCount,
       temperature: temperature,
       humidity: humidity,
       ipAddr: helpers.getIPaddr(),
-      ssid: helpers.getSSID(),
+      ssid: "debug-now",
       time: helpers.getTime()
     }
 
@@ -83,7 +92,8 @@ router.post('/temperature', (req, res, next) => {
 
     // リクエスト送信
     request(reqOpt, (error, response) => {
-      // console.log(error, response.body)
+      console.log(reqOpt);
+      console.log(response.body)
       console.log('送信したよ')
     })
 
