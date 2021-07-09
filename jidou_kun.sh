@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python3 ipaddr.py &
-python3 accel.py &
-python3 distance.py &
-python3 temp.py &
+/usr/bin/python3 /home/pi/kumikomi/ipaddr.py &
+/usr/bin/python3 /home/pi/kumikomi/accel.py &
+/usr/bin/python3 /home/pi/kumikomi/distance.py &
+/usr/bin/python3 /home/pi/kumikomi/temp.py &
