@@ -2,7 +2,7 @@ import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
 import sys
-
+import random
 import subprocess
 import time
 import ipget
@@ -16,7 +16,7 @@ def get_ssid():
     return r[idx + 7:-1]
 
 
-message = ["イエ～イ 見てるぅ～？", "Vimはバカ", "emacsはアホ", "みんなVSCode使え", "PUIPUI", "PUIPUI 俺カー"]
+message = ["イエ～イ 見てるぅ～？", "Vimはバカ", "emacsはアホ", "みんなVSCode使え", "PUIPUI", "ぷいぷい！", "ププイ！", "なあ、なでてくれよ。", "きゅっぷい！", "どこでもいっしょだよ！", "ﾌﾟｲﾌﾟｲﾌﾟｲﾌﾟｲﾌﾟｲﾌﾟｲ"]
 i2c = board.I2C()
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, addr=0x3c)
 # ip= sys.argv 
@@ -40,7 +40,7 @@ while(True):
 
     # Draw the text
     if(flg):
-        draw.text((0, 0), "イエ～イ 見てるぅ～？", font=font2, fill=255)
+        draw.text((0, 0), message[random.randrange(10)], font=font2, fill=255)
         flg = False
     else:
         draw.text((0, 0), "SSID: "+get_ssid(), font=font2, fill=255)
