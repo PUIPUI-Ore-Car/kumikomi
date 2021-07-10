@@ -16,7 +16,7 @@ def get_ssid():
     return r[idx + 7:-1]
 
 
-
+message = ["イエ～イ 見てるぅ～？", "Vimはバカ", "emacsはアホ", "みんなVSCode使え", "PUIPUI", "PUIPUI 俺カー"]
 i2c = board.I2C()
 oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, addr=0x3c)
 # ip= sys.argv 
