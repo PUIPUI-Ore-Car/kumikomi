@@ -6,7 +6,9 @@ import random
 import subprocess
 import time
 import ipget
-# WiFiのSSIDを取得
+
+# WIFiのSSIDを取得
+
 def get_ssid():
     cmd = 'iwconfig wlan0|grep ESSID'
     r = subprocess.run(cmd, shell = True, stdout = subprocess.PIPE, stderr = subprocess.PIPE)\
