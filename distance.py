@@ -56,7 +56,7 @@ def calc_distance(TRIG_PIN, ECHO_PIN, v=34000):
         if(distance < 20):
             if(not flg):
                 print("なでられたよ")
-                subprocess.call("aplay ~/kumikomi/pui.wav", shell=True)
+                subprocess.call("aplay /home/pi/kumikomi/pui.wav", shell=True)
                 flg = True
         else:
             flg = False
