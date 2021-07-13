@@ -95,7 +95,7 @@ while 1:
     if spx_fl > 0 :
         print ('音が出たよ！')
         # playsound("pui.mp3")
-        subprocess.call(["aplay", "/home/pi/kumikomi/pui.wav"], shell=True)
+        # subprocess.call(["aplay", "/home/pi/kumikomi/pui.wav"], shell=True)
         postJson()
 
     print ('{0:4.3f}' .format(spx_fl))
